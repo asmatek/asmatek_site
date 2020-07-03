@@ -57,7 +57,7 @@ $(function () {
                         $("<strong>").text(
                             "Dear " +
                                 firstName +
-                                ", if you fully filled out the form above, please expect pur prompt response. Otherwise, please fill out all of the fields in the form."
+                                ", thank you for filling out the form. Please expect a prompt response from our expert."
                         )
                     );
                     $("#success > .alert-danger").append("</div>");
