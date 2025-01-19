@@ -127,6 +127,7 @@ STATICFILES_DIRS = [
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+
 # Security settings for production environment
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
@@ -134,6 +135,11 @@ SECURE_SSL_REDIRECT = True
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
+
+
+# Enforce HTTPS in production
+SECURE_SSL_REDIRECT = True  # Redirect all HTTP requests to HTTPS
+
 
 # Heroku settings
 django_heroku.settings(locals())
