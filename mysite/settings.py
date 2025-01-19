@@ -27,7 +27,8 @@ SECRET_KEY = '=wc2k(!+*jrl6$kidoy1m+l$-b^vinyk82azpx&5w_-f=0ptp_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['asma-tek.com', 'www.asma-tek.com', 'herokuapp.com']
+
 
 # Application definition
 
