@@ -129,6 +129,18 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
+# SSL and security settings
+SECURE_SSL_REDIRECT = True  # Redirect HTTP to HTTPS
+CSRF_COOKIE_SECURE = True  # Ensure CSRF cookie is sent only over HTTPS
+SESSION_COOKIE_SECURE = True  # Ensure session cookie is sent only over HTTPS
+
+# Security settings (important for production)
+SECURE_HSTS_SECONDS = 3600  # Add HTTP Strict Transport Security (HSTS) for 1 hour (can be increased)
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # Enforce HSTS on subdomains as well
+SECURE_HSTS_PRELOAD = True  # Enable HSTS preload (requires domain registration)
+SECURE_CONTENT_TYPE_NOSNIFF = True  # Prevent browser sniffing of content type
+
+
 # Heroku settings
 django_heroku.settings(locals())
 
