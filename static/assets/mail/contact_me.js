@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sendMessageButton.disabled = true;
 
         try {
-            const response = await fetch("https://formspree.io/xeqrldnq", {
+            const response = await fetch("https://formspree.io/f/mwppdzrn", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
