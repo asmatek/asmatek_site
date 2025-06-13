@@ -140,6 +140,17 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # Enforce HSTS on subdomains as well
 SECURE_HSTS_PRELOAD = True  # Enable HSTS preload (requires domain registration)
 SECURE_CONTENT_TYPE_NOSNIFF = True  # Prevent browser sniffing of content type
 
+# Additional security headers
+X_FRAME_OPTIONS = 'DENY'  # Prevent clickjacking
+SECURE_BROWSER_XSS_FILTER = True  # Enable the browser's XSS filtering and protection
+SECURE_REFERRER_POLICY = 'same-origin'  # Only send referrer to same origin
+# Content Security Policy (CSP) header for extra protection
+CSP_DEFAULT_SRC = ("'self'",)
+CSP_STYLE_SRC = ("'self'", 'fonts.googleapis.com', 'cdnjs.cloudflare.com')
+CSP_FONT_SRC = ("'self'", 'fonts.gstatic.com', 'cdnjs.cloudflare.com')
+CSP_SCRIPT_SRC = ("'self'", 'cdnjs.cloudflare.com', 'use.fontawesome.com')
+CSP_IMG_SRC = ("'self'", 'data:', 'asma-tek.com', 'www.asma-tek.com')
+
 
 # Heroku settings
 django_heroku.settings(locals())
